@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <!-- CSS External -->
+    <link rel="stylesheet" href="mytemplate.css">
+    <style>
+        /* Css Internal, Padding, Flexbox, and Selector */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .flex-container figure {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            text-align: center;
+        }
+
+        .flex-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px; /* CSS Rounded Corners */
+            display: block;
+        }
+
+        /* CSS Transition */
+        .flex-container figcaption {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 0;
+            border-radius: 0 0 10px 10px;
+            font-size: 14px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .flex-container figure:hover figcaption {
+            opacity: 1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Showcase Only. No Functional Buttons -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Stuff 1</a>
+        <a href="#">Stuff 2</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </div>
+
+    <h1>My Gallery</h1>
+
+    <!-- Main Content -->
+    <div class="flex-container">
+        <figure>
+            <img src="img/oscar.jpg" alt="Oscar">
+            <figcaption>My Cat</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img/lebron.jpg" alt="Lebron James">
+            <figcaption>Mokel</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img/orang.jpg" alt="Orang">
+            <figcaption>Idk Who This Guy Is</figcaption>
+        </figure>
+    </div>
+    <div class="flex-container">
+        <figure>
+            <img src="img/cat.jpg" alt="Someone's Cat">
+            <figcaption>Someone's Cat</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img/bukber.jpg" alt="Bukber">
+            <figcaption>Iftar</figcaption>
+        </figure>
+    </div>
+</body>
+</html>
